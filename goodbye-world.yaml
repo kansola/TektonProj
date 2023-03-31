@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: goodbye-latest
+spec:
+  params:
+  - name: username
+    type: string
+  steps:
+    - name: goodbye-latest
+      image: ubuntu
+      script: |
+        #!/bin/bash
+        echo "Goodbye $(params.username)!"   

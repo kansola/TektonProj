@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: hello-latest
+spec: #Every Tak runs as a pod on the k8s cluster with each step running its own container
+  steps:
+    - name: echo
+      image: alpine
+      script: |
+        #!/bin/sh
+        echo "Hello World"
