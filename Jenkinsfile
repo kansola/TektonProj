@@ -8,6 +8,7 @@ pipeline {
 
             steps {
                 echo "building the application..."
+                sleep 30
 
             }
         }
@@ -16,6 +17,7 @@ pipeline {
             
             steps {
                 echo "testing the application..."
+                sleep 30
 
             }
         }
@@ -24,6 +26,7 @@ pipeline {
             
             steps {
                 echo "deploying the application..."
+                sleep 30
 
             }
         }
